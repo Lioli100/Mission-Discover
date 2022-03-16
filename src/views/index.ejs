@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!-- head e a parte da aplicação que não é visível para o usuário -->
+  <head>
+    <!-- Habilita os caracteres especiais, ex: ç, ^, ~ -->
+    <meta charset="UTF-8" />
+
+    <!-- Meta de compatibilidade do IE com o Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Titulo que aparecerá na aba do navegador -->
+    <title>Criar sala - Rocket.Q</title>
+
+    <!-- View Port, o conteúdo será do tamanho da tela do dispositivo e com um zoom de 1.0 inicial-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Importação do CSS -->
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- Todo conteúdo visível para o usuário -->
+  <body>
+    <!-- Div que envolve todo o conteúdo da aplicação -->
+    <div id="home" class="content">
+      <!-- Parte da aplicação que é o cabeçalho que fica no topo da página -->
+      <header>
+        <a href="/">
+        <img src="/images/logo.svg" alt="Rocket.Q Logo" />
+      </a>
+      </header>
+
+      <!-- Dive para alocar a imagem maior do boneco e que será mostrada via css-->
+      <div id="bg">
+        <div class="ball top"></div>
+        <div class="ball bottom"></div>
+      </div>
+
+      <!-- Jogo da velha mais nome bg e enter, cria a linha div id="bg" -->
+      <!-- ponto e nome, cria a classe -->
+
+      <!-- Conteúdo propriamente dito -->
+      <main>
+        <div class="container">
+          <!--  Vai renderizar a parte correta de acordo com a url -->
+         <%- include(`parts/${page}`) %>
+        </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
